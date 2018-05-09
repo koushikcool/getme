@@ -1,0 +1,65 @@
+.parallax{
+  background-image:url('../images/main1.jpg');
+  height:580px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+#spin {
+  color:red;
+  font-family: 'Oswald', sans-serif;
+}
+#spin:after {
+  content:"";
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  0% { content:"Discover"; }
+  30% { content:"Design"; }
+  60% { content:"Develop"; }
+  100% { content:"Deploy"; }
+}
+.text{
+  color:white;
+}
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color:black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+ /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 10s steps(30, end),
+    blink-caret .5s step-end ;
+    animation-iteration-count: 1;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+@media only screen and (max-width:29.9em){
+  .typewriter{
+    font-size:100%;
+  }
+}
+@media only and (min-width:30em) and (max-width:59.9em){
+  .typewriter{
+    font-size:150%;
+  }
+}
+@media only and (min-width:60em) and (max-width:89.9em){
+  .typewriter{
+    font-size:250%;
+  }
+}
